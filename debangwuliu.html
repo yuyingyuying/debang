@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>debangw</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			list-style: none; 
+		}
+		.head{
+			height: 94px; 
+			background-color: #373c64;
+		}
+		.head .pit{
+			width: 980px;
+			margin: 0 auto;
+		}
+		.head img{
+			height: 94px;
+		}
+		.body{
+			margin:0 auto;
+			width: 980px;
+		}
+		.sousuo{
+			position: relative;
+			height: 34px;
+			width: 980px;
+  			margin: 0 auto;
+  			padding: 20px;
+		}
+	.st{
+		height: 30px;
+	}
+		.zhao{
+			margin-top: -22px;
+		    margin-left: 20px;
+		    margin-right: 18px;
+		    padding-bottom: 12px;
+		    font-size: 22px;
+		    font-weight: bolder;
+
+		}
+		.text{
+			position: absolute;
+			float: left;
+			margin-left: 10px;
+			margin-top: 2px;
+    		line-height: 38px;
+    		width: 270px;
+    		padding-left: 8px;
+    		border: 1px solid #C8C8C8;
+    		color: #9A9A9A;
+    		background-color: #fff;
+    		
+			top:10px;
+			left: 140px;
+
+ 
+		}
+		.search{
+			position: absolute;
+			height: 34px;		
+			float: right;
+			right:  100px;
+			background-color: #373c64;
+			top: 22px;
+			color: #fff;
+    		cursor: pointer;
+   			font-size: 14px;
+    		font-weight: 700;
+   			line-height: 34px;
+    		text-align: center;
+    		width: 136px;
+		}
+	
+		#shu{
+			position: absolute;
+			float: left;
+			margin-left: 10px;
+			margin-top: 2px;
+    		line-height: 38px;
+    		width: 270px;
+    		padding-left: 8px;
+    		border: 1px solid #C8C8C8;
+    		color: #9A9A9A;
+    		background-color: #fff;
+			top:10px;
+			left: 440px;
+		}
+		.fontGrey{
+			margin-left: 10px;
+			margin-top: 2px;
+    		line-height: 32px;
+    		width: 230px;
+    		padding-left: 8px;
+    		border: 1px solid #C8C8C8;
+			color: #999;
+		}
+		
+		.hb{
+			height: 34px;
+			width: 980px;
+  			margin: 5px auto;
+  			position: relative;
+		}
+		.hb .xuan li{
+			height: 34px;
+			width: 100px;
+			float: left;
+    		color: #4b4b4b;
+    		font-size: 14px;
+    		list-style: none;
+    		line-height: 34px;
+    		font-weight: 800;
+    		text-align: center;
+    		border-right: 1px solid #e9e9e9;
+		}
+
+		.hb .xuan li:hover{
+			float: left;
+			color: #fff;
+			background-color: #373c64;
+			cursor: pointer;
+
+		}
+		.zhiwei{		
+			width: 980px;
+  			margin: 5px auto;
+  			padding: 5px;
+			height: 485px;
+			clear: both;
+    		overflow: hidden;
+		}
+		.zw {
+			width: 980px;
+		    height: 36px;
+		    line-height: 36px;
+		    margin: 0 auto;
+		    background-color: #f6f6f6;		
+		}
+
+		.zhiwei .zw li{
+			float: left;
+			height: 42px;
+    		font-weight: 800;
+    		text-align: center;
+		    color: #999;
+		    line-height: 36px;
+		    font-size: 16px;
+
+		}
+
+		.mc{
+			width: 170px;
+			 text-align: center;
+			padding-right: 80px;
+		}
+		.dd{
+		    width: 145px;
+		    text-align: center;
+		    overflow: hidden;
+		}
+		.xz{
+			width: 110px;
+			 text-align: center;
+    		overflow: hidden;
+		}
+		.jy{
+			width: 165px;
+			 text-align: center;
+    	overflow: hidden;
+		}
+		.xl{
+			width: 170px;
+			 text-align: center;
+   			overflow: hidden;
+		}
+		.sj{
+			width: 120px;
+			 text-align: center;
+    		overflow: hidden;
+		}
+		.page{
+		    position: relative;
+		     text-align: center;
+	    	text-align: center;
+
+		}
+.xiangqing{
+    height: 420px;
+    width: 100%;
+   /* border: 1px solid red;*/
+    position: relative;
+    /*float: left;*/
+}
+.xiangqing ul li {
+    color: #8b8b8b;
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+}
+
+	.page a{
+	    height: 34px;
+	    line-height: 34px;
+	    display: inline-block;
+	    padding: 0 13px;
+	    margin-left: -1px;
+	    position: relative;
+	    z-index: 1;
+	    color: #494e7b;
+	    border: 1px solid #e6e7e8;
+	    font: 700 14px/34px Arial;
+	    vertical-align: middle;
+	    margin: 0;
+}
+.page .prv{
+    padding: 0 19px 0 24px;
+    background: url(http://img.58cdn.com.cn/global_pc/img/prevIcon.png) no-repeat 15px center;
+    font-weight: 400;
+    font-size: 12px;
+}
+.page .next{
+    padding: 0 24px 0 19px;
+    background: url(http://img.58cdn.com.cn/global_pc/img/nextIcon.png) no-repeat 59px center;
+    font-weight: 400;
+    font-size: 12px;
+
+}
+	.center{
+			position: absolute;
+		    top: 750px;
+		    width: 980px;
+		    margin: 0 auto;
+		    margin-left: 15px;
+		    margin-right: 18px;
+		    padding-bottom: 12px;
+		    font-size: 22px;
+		    font-weight: bolder;
+	
+		}
+	.film{
+		position: absolute;
+	    top: 70px;
+	    width: 400px;
+	    height: 300px;
+	    border: #aab0ca 1px solid;
+	}
+	.wenzi{
+		position: absolute;
+	    top: 70px;
+	    width: 540px;
+	    height: 260px;
+	    float: right;
+	    left: 435px;
+	    font-size: 14px;
+	}
+	.wenzi p{
+		line-height: 28px;
+	    text-indent: 2em;
+	    margin-bottom: 0;
+	    font-size: 13px;
+	}
+	.c3{
+		position: absolute;
+		top:450px;
+	}
+
+	.feel{
+		position: absolute;
+		top: 1450px;
+		width: 980px;
+	    margin: 0 auto;
+	    margin-left: 15px;
+	    margin-right: 18px;
+	    padding-bottom: 12px;
+	    font-size: 22px;
+	    font-weight: bolder;
+	}
+
+	.foot{
+		position: relative;
+	    top: 1800px;
+	    background-color: #373c64;
+	    height: 88px;
+	    text-align: center;
+	    line-height: 80px;
+	    color: #aaaec9;
+	    margin-top: 80px;
+	}
+
+	.lbt{
+		position: relative;
+	    margin: 0 auto;
+	    top: 50px;
+	    width: 980px;
+	    height: 370px;
+	    /*border: 1px solid black;*/
+	}
+
+	.lbt .move{
+		position: absolute;
+		top: 50%;
+		margin-top: -152px;
+		width: 640px;
+		height: 370px;
+		float: left;
+		opacity: 0.4;
+	}
+
+	.lbt .move img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.btnl{
+	    position: absolute;
+	    width: 100px;
+	    height: 270px;
+	    z-index: 10;
+	    cursor: pointer;
+	    opacity: 0.7;
+	    left: 10px;
+	    top: 212px;
+	    background: url(http://pic2.58.com/ui7/job/qy/mingqi/debang/lunbo_arr.png) no-repeat 0 0;
+		}
+
+.btnl:hover{
+    position: absolute;
+    width: 100px;
+    height: 270px;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 1;
+    left: 10px;
+    top: 212px;
+    background: url(http://pic2.58.com/ui7/job/qy/mingqi/debang/lunbo_arr.png) no-repeat 0 0;
+}
+.btnr{
+    position: absolute;
+    width: 100px;
+    height: 270px;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0.7;
+    right: 10px;
+    top: 212px;
+    background: url(http://pic2.58.com/ui7/job/qy/mingqi/debang/lunbo_arr.png) no-repeat -36px 0;
+}
+
+.btnr:hover{
+    position: absolute;
+    width: 100px;
+    height: 270px;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 1;
+    right: 10px;
+    top: 212px;
+    background: url(http://pic2.58.com/ui7/job/qy/mingqi/debang/lunbo_arr.png) no-repeat -36px 0;
+}
+
+.xinxi{
+    background-color: #fff;
+    position: absolute;
+    z-index: 2000;
+    width: 690px;
+    left: 108px;
+    top: 160px;
+    border: 1px solid #f3f3f3;
+    /*overflow: hidden;*/
+    display: none;
+    left: 300px;
+}
+.xinxi .ct li{
+	float: left;
+    width: 57px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 30px;
+    margin-left: 10px;
+    color: #494e7b;
+
+}
+
+.xinxi .ct li:hover{
+	    background-color: #494e7b;
+    	color: #fbfbfb;
+        cursor: pointer;
+}
+#ul li{
+	float: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    width: 75px;
+    margin-right: 45px;
+    margin-left: 18px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #fff;
+}
+#ul li:hover{
+	color:  #494e7b;
+	text-decoration:underline;
+	cursor: pointer;
+}
+
+#ul{
+	display: none;
+}
+</style>
+</head>
+<body>
+	<div class="head">
+		<div class="pit">
+			<img src="debang.jpg">
+		</div>
+	</div>
+
+	<div class="body">
+
+		<div class="sousuo">
+			<div clss="st">
+				<img src="http://pic2.58.com/ui7/job/qy/mingqi/debang/span.png" alt="">
+				<div class="zhao">招聘职位</div>
+			</div>
+				<span type="text" class="text" id="city" >哈尔滨</span>
+	   			
+	   			<input  id="shu" value="请输入职位关键字" onblur="if(this.value==''){this.value='请输入职位关键字';this.className='text';}" onfocus="if(this.value=='请输入职位关键字'){this.value='';this.className='fontGrey';}">
+	    
+	 		<div class="search">搜索</div>
+		</div>
+		<div class="xinxi">
+			<ul class="ct">
+				<li class="hot">热门</li>
+				<li class="a">A-C</li>
+				<li class="d">D-G</li>
+				<li class="h">H-J</li>
+				<li class="k">K-N</li>
+				<li class="p">P-T</li>
+				<li class="w">W-Z</li>
+			</ul>
+			<ul class="cb-hot" id="ul" value="202">
+				<li id="241">石家庄</li>
+				<li id="1">北京</li>
+				<li id="2">上海</li>
+				<li id="18">天津</li>
+				<li id="37">重庆</li>
+				<li id="3">广州</li>
+				<li id="4">深圳</li>
+				<li id="413">东莞</li>
+				<li id="79">杭州</li>
+				<li id="102">成都</li>
+				<li id="188">沈阳</li><li id="147">大连</li><li id="172">南京</li><li id="5">苏州</li><li id="202">哈尔滨</li><li id="342">郑州</li><li id="265">济南</li><li id="122">青岛</li><li id="837">合肥</li><li id="483">西安</li><li id="158">武汉</li><li id="414">长沙</li><li id="0">不限</li>
+			</ul>
+			<ul class="cb-a" id="ul" value="188">
+				<li id="523">鞍山</li>
+				<li id="3251">安庆</li><li id="9533">巴音郭楞</li><li id="3470">蚌埠</li><li id="801">包头</li><li id="424">保定</li><li id="2044">宝鸡</li><li id="1">北京</li><li id="652">沧州</li><li id="319">长春</li><li id="10456">潮州</li><li id="102">成都</li><li id="10260">滁州</li><li id="37">重庆</li></ul>
+			
+			<ul class="cb-d" id="ul" value="188">
+				<li id="147">大连</li>
+				<li id="375">大庆</li><li id="3445">丹东</li><li id="10297">定安</li><li id="10320">定西</li><li id="623">东营</li><li id="413">东莞</li><li id="9702">鄂州</li><li id="2302">恩施</li><li id="222">佛山</li><li id="304">福州</li><li id="2363">赣州</li><li id="3">广州</li><li id="1039">桂林</li></ul>
+
+			<ul class="cb-h" id="ul" value="188">
+				<li id="202">哈尔滨</li
+					><li id="2053">海口</li><li id="79">杭州</li><li id="5632">菏泽</li><li id="993">衡水</li><li id="811">呼和浩特</li><li id="10083">葫芦岛</li><li id="831">湖州</li><li id="5756">怀化</li><li id="968">淮安</li><li id="2299">黄冈</li><li id="2323">黄山</li><li id="1734">黄石</li><li id="722">惠州</li><li id="700">吉林</li><li id="265">济南</li><li id="450">济宁</li><li id="618">建湖</li><li id="927">揭阳</li><li id="531">金华</li><li id="2354">锦州</li><li id="3350">晋城</li><li id="297">晋江</li><li id="2296">荆门</li><li id="3479">荆州</li></ul>
+
+			<ul class="cb-k" id="ul" value="188">
+				<li id="952">兰州</li>
+				<li id="772">廊坊</li><li id="3237">乐山</li><li id="7923">丽水</li><li id="9715">凉山</li><li id="882">聊城</li><li id="2038">辽阳</li><li id="505">临沂</li><li id="7133">柳州</li><li id="10500">六盘水</li><li id="2039">马鞍山</li><li id="679">茂名</li><li id="9374">梅州</li><li id="3489">牡丹江</li><li id="293">南安</li><li id="172">南京</li><li id="845">南宁</li><li id="394">南通</li><li id="135">宁波</li><li id="7969">宁德</li></ul>
+
+			<ul class="cb-p" id="ul" value="188">
+				<li id="2041">盘锦</li>
+				<li id="2429">莆田</li><li id="5853">齐齐哈尔</li><li id="122">青岛</li><li id="291">泉州</li><li id="3177">日照</li><li id="397">如皋</li><li id="2422">三亚</li><li id="783">汕头</li><li id="2">上海</li><li id="10116">上饶</li><li id="355">绍兴</li><li id="4">深圳</li><li id="188">沈阳</li><li id="2032">十堰</li><li id="241">石家庄</li><li id="5">苏州</li><li id="6718">绥化</li><li id="9695">遂宁</li><li id="403">台州</li><li id="686">泰安</li><li id="740">太原</li><li id="18">天津</li><li id="6729">铁岭</li><li id="10012">通辽</li><li id="11271">桐城</li><li id="10279">铜陵</li><li id="6793">衢州</li></ul>
+
+			<ul class="cb-w" id="ul" value="188">
+				<li id="518">威海</li>
+				<li id="362">潍坊</li><li id="330">温州</li><li id="9968">文昌</li><li id="9998">乌兰察布</li><li id="984">乌鲁木齐</li><li id="93">无锡</li><li id="2045">芜湖</li><li id="158">武汉</li><li id="606">厦门</li><li id="9723">仙桃</li><li id="9616">咸宁</li><li id="891">襄阳</li><li id="2047">湘潭</li><li id="1016">新乡</li><li id="8672">信阳</li><li id="751">邢台</li><li id="471">徐州</li><li id="5633">宣城</li><li id="228">烟台</li><li id="613">盐城</li><li id="3184">延边</li><li id="649">扬中</li><li id="2284">阳江</li><li id="2380">宜宾</li><li id="858">宜昌</li><li id="12221">义乌</li><li id="791">湛江</li><li id="710">漳州</li><li id="3328">张家口</li><li id="901">肇庆</li><li id="342">郑州</li><li id="910">珠海</li><li id="6745">自贡</li></ul>
+		</div>
+
+		<div class="hb">
+			<ul class="xuan">
+				<li>普工/技工</li>
+				<li>快递员</li>
+				<li>司机</li>
+				<li>文职/实习生</li>
+				<li>其他职位</li>
+			</ul>
+		
+			<div class="zhiwei">
+				<ul class="zw">
+					<li class="mc">职位名称</li>
+					<li class="dd">工作地点</li>
+					<li class="xz">薪资</li>
+					<li class="jy">工作经验</li>
+					<li class="xl">最低学历</li>
+					<li class="sj">发布时间</li>
+				</ul>
+				<div class="xiangqing">
+					<!-- <ul>
+						<li class="mc">职位名称</li>
+						<li class="dd">工作地点</li>
+						<li class="xz">薪资</li>
+						<li class="jy">工作经验</li>
+						<li class="xl">最低学历</li>
+						<li class="sj">发布时间</li>
+					</ul> -->
+				</div>
+			
+
+				<div class="page">
+				
+				</div>
+
+			</div>	
+		</div>
+
+		<div class="center">	
+			<div class="c1">
+				<img src="http://pic2.58.com/ui7/job/qy/mingqi/debang/span.png" alt="">
+				<span>公司简介</span>
+			</div>
+
+			<div class="c2">
+				<div class="film"></div>
+				<div class="wenzi">
+					<p>
+						德邦是国家“AAAAA”级物流企业，主营国内公路运输业务。截止2015年7月，公司已开设直营网点 5,500多家，服务网络遍及全国，自有营运车辆9,300余台，全国转运中心总面积超过111万平方米。
+					</p>
+					<p>
+						
+						公司始终以客户为中心随时候命、持续创新，始终坚持自建营业网点、自购进口车辆、搭建最优线路，优化运力成本，为客户提供快速高效、便捷及时、安全可靠的服务体验，助力客户创造最大的价值。
+								
+					</p>
+					<p>
+						
+						公司秉承“承载信任、助力成功”的服务理念，保持锐意进取、注重品质的态度，强化人才战略，通过不断的技术创新和信息化系统的搭建，提升运输网络和标准化体系，创造最优化的运载模式，为广大客户提供安全、快速、专业、满意的物流服务。一直以来，公司都致力于与员工共同发展和成长，打造人企双赢。在推动经济发展，提升行业水平的同时，努力创造更多的社会效益，为国民经济的持续发展，和谐社会的创建做出积极贡献，努力将德邦打造成为中国人首选的国内物流运营商。
+								
+					</p>
+				</div>
+			</div>
+			
+			<div class="c3">
+				<div>
+					<img src="http://pic2.58.com/ui7/job/qy/mingqi/debang/span.png" alt="">
+					<span>招聘流程</span>
+				</div>
+				<img src="path .png">
+			</div>
+		</div>
+
+		<div class="feel">
+			<div class="fl">
+				<img src="http://pic2.58.com/ui7/job/qy/mingqi/debang/span.png" alt="">
+				<span>感受德邦</span>
+			</div>
+
+			<div class="lbt">
+				<div class="move">
+					<img src="1.jpg"></img>
+				</div>		
+				<div class="move">
+					<img src="2.jpg"></img>
+				</div>	
+				<div class="move">
+					<img src="3.jpg"></img>
+				</div>		
+				<div class="move">
+					<img src="4.jpg"></img>
+				</div>
+				<div class="move">
+					<img src="5.jpg"></img>
+				</div>
+				<div class="move">
+					<img src="6.jpg"></img>
+				</div>
+				<div class="move">
+					<img src="7.jpg"></img>
+				</div>
+
+			</div>
+
+				<div class="btnl" style="width: 17px; height: 97px; z-index: 4;"></div>
+				<div class="btnr" style="width: 17px; height: 97px; z-index: 4;"></div>
+		</div>
+	</div>
+
+	<div class="foot">
+			<span>加入德邦 </span>
+			<span>感受快速成长 </span>
+			<span> 全国服务热线:400-830-5555</span>
+
+	</div>
+
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+//城市选择
+$('.text').on('mousemove',function(){
+	$('.xinxi').css({"display":"block"})
+	$('.cb-hot').css({"display":"block"})
+	$('.hot').css({"backgroundColor":"#494e7b","color":"white"})
+})
+
+$('.hot').on('mousemove',function(){
+	$('.hot').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-hot').css({"display":"block"})
+
+	$('.cb-a').css({"display":"none"})
+	$('.cb-d').css({"display":"none"})
+	$('.cb-h').css({"display":"none"})
+	$('.cb-k').css({"display":"none"})
+	$('.cb-p').css({"display":"none"})
+	$('.cb-w').css({"display":"none"})
+
+	$('.a').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.d').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.h').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.p').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.k').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.w').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+$('.a').on('mousemove',function(){
+	$('.a').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-a').css({"display":"block"})
+		
+	$('.cb-hot').css({"display":"none"})
+	$('.cb-d').css({"display":"none"})
+	$('.cb-h').css({"display":"none"})
+	$('.cb-k').css({"display":"none"})
+	$('.cb-p').css({"display":"none"})
+	$('.cb-w').css({"display":"none"})
+
+	$('.hot').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.d').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.h').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.p').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.k').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.w').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+
+$('.d').on('mousemove',function(){
+	$('.d').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-d').css({"display":"block"})
+		
+	$('.cb-hot').css({"display":"none"})
+	$('.cb-a').css({"display":"none"})
+	$('.cb-h').css({"display":"none"})
+	$('.cb-k').css({"display":"none"})
+	$('.cb-p').css({"display":"none"})
+	$('.cb-w').css({"display":"none"})
+
+	$('.hot').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.a').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.h').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.p').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.k').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.w').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+$('.h').on('mousemove',function(){
+	$('.h').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-h').css({"display":"block"})
+		
+	$('.cb-hot').css({"display":"none"})
+	$('.cb-a').css({"display":"none"})
+	$('.cb-d').css({"display":"none"})
+	$('.cb-k').css({"display":"none"})
+	$('.cb-p').css({"display":"none"})
+	$('.cb-w').css({"display":"none"})
+
+	$('.hot').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.a').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.d').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.p').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.k').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.w').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+$('.p').on('mousemove',function(){
+	$('.p').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-p').css({"display":"block"})
+		
+	$('.cb-hot').css({"display":"none"})
+	$('.cb-a').css({"display":"none"})
+	$('.cb-h').css({"display":"none"})
+	$('.cb-k').css({"display":"none"})
+	$('.cb-d').css({"display":"none"})
+	$('.cb-w').css({"display":"none"})
+
+	$('.hot').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.a').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.h').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.d').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.k').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.w').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+
+$('.k').on('mousemove',function(){
+	$('.k').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-k').css({"display":"block"})
+		
+	$('.cb-hot').css({"display":"none"})
+	$('.cb-a').css({"display":"none"})
+	$('.cb-h').css({"display":"none"})
+	$('.cb-d').css({"display":"none"})
+	$('.cb-p').css({"display":"none"})
+	$('.cb-w').css({"display":"none"})
+
+	$('.hot').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.a').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.h').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.p').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.d').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.w').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+
+$('.w').on('mousemove',function(){
+	$('.w').css({"backgroundColor":"#494e7b","color":"white"})
+	$('.cb-w').css({"display":"block"})
+		
+	$('.cb-hot').css({"display":"none"})
+	$('.cb-a').css({"display":"none"})
+	$('.cb-h').css({"display":"none"})
+	$('.cb-k').css({"display":"none"})
+	$('.cb-p').css({"display":"none"})
+	$('.cb-d').css({"display":"none"})
+
+	$('.hot').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.a').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.h').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.p').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.k').css({"backgroundColor":"white","color":"#494e7b"})
+	$('.d').css({"backgroundColor":"white","color":"#494e7b"})
+})
+
+
+	$('#ul li').on('click',function(e){
+		var e = e || window.event;
+		var target = event.target || event.srcElement;
+		$('.text').text('');
+		$('.text').html(target.innerHTML);
+		$(this).css({"color":"#494e7b"});
+
+	})
+
+$('.xinxi').on('mouseleave',function(){
+	$('.xinxi').css({"display":"none"})
+})
+
+
+
+//获取数据
+
+
+function page(json,data){
+	            
+    var nowNum = json.nowNum || 1;
+    var allNum = json.allNum || 5;
+
+	if (nowNum > 1) {
+		var $A = $('<a href="#' + (nowNum - 1) + '" class="prv">上一页</a>');
+		$('.page').append($A);
+	}
+
+
+	for(var i = 1; i <= allNum; i++){
+		var $A = $('<a href="#' + i + '"></a>');
+		if(i === nowNum){
+			$A.text(i);
+		}else{
+			$A.text(i);
+			$A.css({"color":"red"}) 		
+		}		
+		$('.page').append($A);
+	}
+
+
+	
+
+	if(nowNum < allNum){
+		var $A = $('<a href="#'+ (nowNum + 1) +'" class="next">下一页</a>');
+		$('.page').append($A);
+
+		// $A.on('click',function(){
+		// 	json.nowNum = nowNum++;
+		// 	page(json,Json);
+
+		// })
+	}
+	
+
+		
+		$('.page a').on('click',function(){
+
+			var nowNum = parseInt($(this).prop('href').slice(-1));
+			$('.page ').html('');
+			json.nowNum = nowNum;
+
+			page(json,data);
+		
+									
+		})
+
+	json.callback(nowNum,allNum,data);
+
+}
+
+
+
+var json = {
+	nowNum: 1,
+	allNum:5,
+	callback: function(now,all,data){
+		
+				var num = now * 10 <data.length ? 10 :data.length % 10;
+
+				if ($('.xiangqing ul').length==0 ) {                                       
+                    
+                    for (var i = 0; i < num; i++) {
+                        var ul = $('<ul><li class="mc">' + data[(now - 1) * 10 + i].name + '</li><li class="dd">' + data[(now - 1) * 10 + i].address + '</li><li class="xz">' + data[(now - 1) * 10 + i].salary + '</li><li class="jy">' + data[(now - 1) * 10 + i].experience + '</li><li class="xl">' + data[(now - 1) * 10 + i].degree + '</li><li class="sj">' + data[(now - 1) * 10 + i].time + '</li></ul>');
+                	$('.xiangqing').append(ul);
+                                      
+                    }  
+
+                } else {
+					for (var i = 0; i < num; i++) {
+                		$('.xaingqing ul').eq(i).html('<li class="mc">' + data[(now - 1) * 10 + i].name + '</li><li class="dd">' + data[(now - 1) * 10 + i].address + '</li><li class="xz">' + data[(now - 1) * 10 + i].salary + '</li><li class="jy">' + data[(now - 1) * 10 + i].experience + '</li><li class="xl">' + data[(now - 1) * 10 + i].degree + '</li><li class="sj">' + data[(now - 1) * 10 + i].time + '</li></ul>');
+            		}  
+		
+				} 
+		
+	}  
+} 
+
+
+$.ajax({
+	type:'GET',
+	url:'wuliu.txt',
+	dataType:'json',
+	success:function(data){
+		page(json,data);
+		// console.log(Json);
+		// console.log($.type(Json))
+	},
+	error:function(){
+		alert('错了');
+	}
+});
+
+
+
+
+
+
+//轮播图
+		var oLi = $('.lbt .move');
+		var index = 0;
+		var flag = true;
+	function init () {
+		oLi.css({left: '900px','z-index':'3','top':'50%','height':'0px','margin-top':'0px'});
+		
+		oLi.eq(0).css({'top':'70%','margin-top':'-170px','height':'180px','width':'450px','left':'40px','opacity':'0.4','z-index':'0'});
+		
+		oLi.eq(6).css({'top':'70%','margin-top':'-170px','height':'180px','width':'450px','left':'490px','opacity':'0.4','z-index':'0'});
+
+		oLi.eq(1).css({'top':'60%','margin-top':'-160px','height':'230px','width':'450px','left':'80px','opacity':'0.8','z-index':'1'});
+
+		oLi.eq(5).css({'top':'60%','margin-top':'-160px','height':'230px','width':'450px','left':'450px','opacity':'0.8','z-index':'1'});
+
+		oLi.eq(2).css({'top':'50%','margin-top':'-150px','height':'300px','width':'450px','left':'120px','opacity':'1','z-index':'2'});
+
+		oLi.eq(4).css({'top':'50%','margin-top':'-150px','height':'300px','width':'450px','left':'410px','opacity':'1','z-index':'2'});
+		
+		oLi.eq(3).css({'top':'0','margin-top':'0px','height':"370px",'width':'640px','left':'170px','opacity':'1','z-index':'3'});			
+	}
+	
+	function leftMove(){
+		
+		oLi.css({"z-index":'6'});
+		oLi.eq((index + 4) % 7).css({'z-index':'100'});
+		oLi.eq( (index+4)%7).animate({'top':'0','margin-top':'0px','height':"370px",'width':'640px','left':'170px','opacity':'1','z-index':'3'});
+		
+		oLi.eq( (index+3)%7 ).animate({'top':'50%','margin-top':'-150px','height':'300px','width':'450px','left':'120px','opacity':'1','z-index':'2'});
+		oLi.eq( (index+2)%7 ).animate({'top':'60%','margin-top':'-160px','height':'230px','width':'450px','left':'80px','opacity':'0.8','z-index':'1'});
+		oLi.eq( (index+1)%7 ).animate({'top':'70%','margin-top':'-170px','height':'180px','width':'450px','left':'40px','opacity':'0.4','z-index':'0'});
+		
+			
+		oLi.eq( (index+6)%7) .animate({'top':'60%','margin-top':'-160px','height':'230px','width':'450px','left':'450px','opacity':'0.8','z-index':'1'});
+		oLi.eq( (index+5)%7).animate({'top':'50%','margin-top':'-150px','height':'300px','width':'450px','left':'410px','opacity':'1','z-index':'2'});
+		oLi.eq( index%7 ).animate({'top':'70%','margin-top':'-170px','height':'180px','width':'450px','left':'490px','opacity':'0.4','z-index':'0'},function () {
+			index++;				
+		});		
+	}
+
+	function rightMove(){
+		
+		oLi.css({'z-index':'6'});				
+		oLi.eq((index + 2) % 7).css({'z-index':'100'});
+		oLi.eq( (index+2)%7).animate({'top':'0','margin-top':'0px','height':"370px",'width':'640px','left':'170px','opacity':'1','z-index':'100'});
+		oLi.eq( (index+1)%7 ).animate({'top':'50%','margin-top':'-150px','height':'300px','width':'450px','left':'120px','opacity':'1','z-index':'2'});
+		oLi.eq( index%7 ).animate({'top':'60%','margin-top':'-160px','height':'230px','width':'450px','left':'80px','opacity':'0.8','z-index':'1'});
+
+		oLi.eq( (index+6)%7) .animate({'top':'70%','margin-top':'-170px','height':'180px','width':'450px','left':'40px','opacity':'0.4','z-index':'0'});
+		oLi.eq( (index+5)%7).animate({'top':'70%','margin-top':'-170px','height':'180px','width':'450px','left':'490px','opacity':'0.4','z-index':'0'});
+		oLi.eq( (index+4)%7).animate({'top':'60%','margin-top':'-160px','height':'230px','width':'450px','left':'450px','opacity':'0.8','z-index':'1'});
+		oLi.eq( (index+3)%7 ).animate({'top':'50%','margin-top':'-150px','height':'300px','width':'450px','left':'410px','opacity':'1','z-index':'2'},function(){
+				index--;			
+		});		
+	}
+
+	$('.btnl').on('click',function () {
+		leftMove();
+	})
+	$('.btnr').on('click',function () {
+		rightMove();
+	})
+
+	init();
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
